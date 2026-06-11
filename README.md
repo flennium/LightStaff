@@ -14,6 +14,7 @@ The default setup gives staff a compact investigation hotbar with clear names, l
   <img src="docs/screenshots/lightstaff-hotbar-overview.png" alt="Staff Mode hotbar overview" width="720">
 </p>
 
+
 ### Staff Mode Tools
 
 Staff entering Staff Mode receives a configurable hotbar:
@@ -28,6 +29,8 @@ Staff entering Staff Mode receives a configurable hotbar:
 | `8` | Exit | Leave Staff Mode and restore the saved player state. |
 
 Every tool is configured in `tools.yml`: enabled state, slot, permission, material fallback list, cooldown, display name, lore, sound, volume, and pitch.
+
+
 
 <table>
   <tr>
@@ -67,6 +70,8 @@ Every tool is configured in `tools.yml`: enabled state, slot, permission, materi
     </td>
   </tr>
 </table>
+
+
 
 ### Storage Choices
 
