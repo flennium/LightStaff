@@ -1,0 +1,95 @@
+# LightStaff tool configuration.
+# Material supports comma-separated fallbacks for version compatibility.
+
+tools:
+  vanish:
+    enabled: true
+    slot: 0
+    permission: "lightstaff.vanish"
+    material: "ENDER_EYE"
+    cooldown: 1000
+    display_name: "<gradient:#67e8f9:#22d3ee><bold>Vanish</bold></gradient>"
+    lore:
+      - "<gray>Hide yourself from regular players."
+      - "<dark_gray>Status updates are saved."
+      - ""
+      - "<aqua>Click</aqua> <gray>to toggle visibility.</gray>"
+    sound: "BLOCK_GLASS_BREAK"
+    sound_volume: 0.5
+    sound_pitch: 0.5
+  push:
+    enabled: true
+    slot: 1
+    permission: "lightstaff.push"
+    material: "SLIME_BALL"
+    cooldown: 1000
+    strength: 2.0
+    display_name: "<gradient:#fde047:#f97316><bold>Push</bold></gradient>"
+    lore:
+      - "<gray>Move a player away from your position."
+      - "<dark_gray>Useful for quick spacing."
+      - ""
+      - "<gold>Right-click player</gold> <gray>to push.</gray>"
+    sound: "ENTITY_PLAYER_ATTACK_KNOCKBACK"
+    sound_volume: 0.5
+    sound_pitch: 0.5
+  inspect:
+    enabled: true
+    slot: 2
+    permission: "lightstaff.inspect"
+    material: "BRUSH,BOOK,CHEST"
+    cooldown: 1000
+    display_name: "<gradient:#c084fc:#60a5fa><bold>Inspector</bold></gradient>"
+    lore:
+      - "<gray>Open a read-only inventory view."
+      - "<dark_gray>Armor and offhand are included."
+      - ""
+      - "<light_purple>Right-click player</light_purple> <gray>to inspect.</gray>"
+    sound: "BLOCK_CHEST_OPEN"
+    sound_volume: 0.5
+    sound_pitch: 0.5
+  freeze:
+    enabled: true
+    slot: 4
+    permission: "lightstaff.freeze"
+    material: "PACKED_ICE,ICE"
+    cooldown: 1000
+    display_name: "<gradient:#f87171:#ef4444><bold>Freeze</bold></gradient>"
+    lore:
+      - "<gray>Stop movement, chat, commands, and item actions."
+      - "<dark_gray>Disconnect handling is configurable."
+      - ""
+      - "<red>Right-click player</red> <gray>to toggle freeze.</gray>"
+    sound: "BLOCK_GLASS_BREAK"
+    sound_volume: 0.5
+    sound_pitch: 0.5
+  fly:
+    enabled: true
+    slot: 6
+    permission: "lightstaff.fly"
+    material: "FEATHER"
+    cooldown: 1000
+    display_name: "<gradient:#bbf7d0:#4ade80><bold>Flight</bold></gradient>"
+    lore:
+      - "<gray>Toggle staff flight without leaving Staff Mode."
+      - "<dark_gray>Great for fast investigations."
+      - ""
+      - "<green>Click</green> <gray>to toggle flight.</gray>"
+    sound: "ENTITY_BAT_TAKEOFF"
+    sound_volume: 0.5
+    sound_pitch: 0.5
+  exit:
+    enabled: true
+    slot: 8
+    permission: ""
+    material: "FIRE_CHARGE"
+    cooldown: 0
+    display_name: "<gradient:#fb7185:#f43f5e><bold>Exit Staff Mode</bold></gradient>"
+    lore:
+      - "<gray>Restore your saved inventory and state."
+      - "<dark_gray>Use when your staff work is done."
+      - ""
+      - "<red>Click</red> <gray>to exit safely.</gray>"
+    sound: "BLOCK_NOTE_BLOCK_PLING"
+    sound_volume: 0.5
+    sound_pitch: 0.5

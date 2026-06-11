@@ -1,0 +1,97 @@
+# LightStaff Plugin Configuration
+
+# Global fallback cooldown in milliseconds for staff tools.
+cooldown: 1000
+
+# Action bar update interval in ticks. 20 ticks = 1 second.
+actionbar_interval: 2
+
+# Restore saved inventory/state when staff leave the server while in Staff Mode.
+restore_on_quit: true
+
+# Automatically vanish staff when they enter Staff Mode.
+auto_vanish_on_enter: false
+
+# Combat entry policy for /lightstaff.
+# When enabled, players in combat cannot enter Staff Mode unless they have the bypass permission.
+combat:
+  block_lightstaff_entry: true
+  bypass_permission: "lightstaff.combat.bypass"
+  metadata_keys:
+    - "combatlogx_in_combat"
+    - "in_combat"
+    - "inCombat"
+    - "combatTagged"
+    - "tagged"
+  placeholderapi:
+    enabled: true
+    placeholders:
+      - "%combatlogx_in_combat%"
+      - "%combatlog_in_combat%"
+      - "%pvpmanager_in_combat%"
+      - "%deluxecombat_in_combat%"
+      - "%combatplus_in_combat%"
+    combat_values:
+      - "yes"
+      - "true"
+      - "1"
+      - "tagged"
+      - "combat"
+      - "in_combat"
+
+# Gamemode to apply when entering Staff Mode.
+# Options: permission, keep, creative, survival, adventure, spectator
+# permission = creative only with lightstaff.creative, otherwise survival.
+gamemode_on_enter: "permission"
+
+# Flight behavior when entering Staff Mode.
+allow_flight_on_enter: true
+start_flying_on_enter: true
+
+# Freeze ban duration in days.
+freeze_ban_days: 30
+
+# Message shown when a frozen player disconnects and is kicked.
+# Supports one line as text or multiple lines as a YAML list.
+freeze_ban_message:
+  - "You disconnected while frozen."
+  - "Open a ticket if you believe this was a mistake."
+
+# Freeze punishment command. Leave empty to only kick/log frozen disconnects.
+# Placeholders: {player}, {uuid}, {duration}, {reason}
+freeze_punishment_command: ""
+
+# Commands frozen players may still run. Values should include the leading slash.
+freeze_allowed_commands:
+  - "/helpop"
+  - "/discord"
+
+# Staff whitelist bypass mode. Can also be toggled by /staffwhitelist.
+staff_whitelist_enabled: false
+
+# Write moderation actions to plugins/LightStaff/logs/audit.log.
+audit_log_enabled: true
+
+# Notify online staff when staff users join or leave.
+staff_alerts_enabled: false
+
+# Storage backend.
+# type: sqlite, json, mysql, or mariadb
+storage:
+  type: "sqlite"
+  mysql:
+    host: "localhost"
+    port: 3306
+    database: "lightstaff"
+    username: "root"
+    password: ""
+    use_ssl: false
+    extra_parameters: "allowPublicKeyRetrieval=true&serverTimezone=UTC"
+  mariadb:
+    host: "localhost"
+    port: 3306
+    database: "lightstaff"
+    username: "root"
+    password: ""
+    use_ssl: false
+    extra_parameters: ""

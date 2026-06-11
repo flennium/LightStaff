@@ -1,0 +1,58 @@
+name: Build and Release
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Build release jar
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: maven
+
+      - name: Read project version
+        id: version
+        run: |
+          VERSION="$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Build jar
+        run: mvn -DskipTests clean package
+
+      - name: Prepare artifact
+        id: artifact
+        run: |
+          mkdir -p dist
+          JAR="$(find target -maxdepth 1 -type f -name '*-${{ steps.version.outputs.version }}.jar' ! -name 'original-*' | head -n 1)"
+          if [ -z "$JAR" ]; then
+            echo "No release jar found in target" >&2
+            ls -la target >&2
+            exit 1
+          fi
+          cp "$JAR" dist/
+          echo "file=dist/$(basename "$JAR")" >> "$GITHUB_OUTPUT"
+
+      - name: Publish GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: build-${{ github.run_number }}
+          name: LightStaff ${{ steps.version.outputs.version }} build ${{ github.run_number }}
+          target_commitish: ${{ github.sha }}
+          generate_release_notes: true
+          files: ${{ steps.artifact.outputs.file }}

@@ -1,0 +1,85 @@
+name: LightStaff
+version: '1.0.0'
+main: org.flennn.LightStaff
+api-version: '1.19'
+folia-supported: true
+softdepend: [PlaceholderAPI, CombatLogX]
+commands:
+  lightstaff:
+    description: Toggle Staff Mode
+    aliases: [ls,staffmode,sm]
+  togglestaffwhitelist:
+    description: Toggle staff whitelist
+    permission: lightstaff.whitelist.toggle
+    aliases: [staffwhitelist]
+  stafftp:
+    description: Teleport to another online staff member
+    permission: lightstaff.stafftp
+  vanish:
+    description: Toggle vanish mode for yourself or another player
+    usage: /vanish [player]
+    permission: lightstaff.vanish
+  freeze:
+    description: Freeze or unfreeze a player
+    usage: /freeze <player> [reason]
+    permission: lightstaff.freeze
+  unfreeze:
+    description: Unfreeze a player
+    usage: /unfreeze <player>
+    permission: lightstaff.freeze
+
+permissions:
+  lightstaff.use:
+    description: Allows enabling/disabling Staff Mode
+    default: op
+  lightstaff.vanish:
+    description: Allows using the vanish tool and /vanish command
+    default: op
+  lightstaff.vanish.others:
+    description: Allows toggling vanish mode for other players
+    default: op
+  lightstaff.inspect:
+    description: Allows using the inspect tool
+    default: op
+  lightstaff.freeze:
+    description: Allows using the freeze tool
+    default: op
+  lightstaff.fly:
+    description: Allows using the fly toggle tool
+    default: op
+  lightstaff.whitelist.bypass:
+    description: Allows bypassing the server whitelist
+    default: op
+  lightstaff.whitelist.toggle:
+    description: Allows toggling the staff whitelist
+    default: op
+  lightstaff.freeze.staff:
+    description: Allows freezing other staff members
+    default: op
+  lightstaff.inspect.staff:
+    description: Allows inspecting other staff members
+    default: op
+  lightstaff.see:
+    description: Allows seeing vanished staff
+    default: op
+  lightstaff.combat.bypass:
+    description: Allows entering Staff Mode while in combat
+    default: op
+  lightstaff.push:
+    description: Allows using the push tool
+    default: op
+  lightstaff.creative:
+    description: Allows dropping/picking up items in Staff Mode and using creative mode
+    default: op
+  lightstaff.status:
+    description: Allows checking Staff Mode status for a player
+    default: op
+  lightstaff.recover:
+    description: Allows recovering stuck Staff Mode sessions
+    default: op
+  lightstaff.reload:
+    description: Allows reloading LightStaff configuration
+    default: op
+  lightstaff.alerts:
+    description: Receives staff join and leave alerts
+    default: op

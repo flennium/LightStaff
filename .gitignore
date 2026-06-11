@@ -1,0 +1,15 @@
+target/
+dependency-reduced-pom.xml
+
+.idea/
+*.iml
+*.ipr
+*.iws
+
+*.log
+*.tmp
+*.bak
+
+plugins/
+run/
+server/

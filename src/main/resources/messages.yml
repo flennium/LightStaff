@@ -1,0 +1,90 @@
+# LightStaff messages. Uses MiniMessage format.
+
+prefix: "<dark_gray>[<gradient:#7dd3fc:#22c55e>LightStaff</gradient><dark_gray>] <gray>"
+
+commands:
+  player_only: "<red>This command can only be used by a player.</red>"
+  no_permission: "<red>You do not have permission to do that.</red>"
+  no_permission_with_node: "<red>You do not have permission to do that.</red> <dark_gray>({permission})</dark_gray>"
+  player_not_online: "<red>That player is not online.</red>"
+  player_not_found: "<red>Could not find that player.</red>"
+  reload: "<green>Configuration reloaded.</green> <gray>Warnings:</gray> <yellow>{warnings}</yellow>"
+  reload_more_warnings: "<yellow>{count}</yellow> <gray>more warning(s) were written to console.</gray>"
+
+lightstaff:
+  enabled: "<green>Staff Mode enabled.</green>"
+  enabled_hint: "<gray>Your staff tools are ready in the hotbar.</gray>"
+  disabled: "<green>Staff Mode disabled.</green> <gray>Your previous state was restored.</gray>"
+  enable_failed: "<red>Could not enter Staff Mode. Your inventory was not changed.</red>"
+  disable_failed: "<red>Could not exit Staff Mode. Please try recovery or check console.</red>"
+  combat_blocked: "<red>You cannot enter Staff Mode while combat tagged.</red>"
+  recover_active: "<green>Recovered active staff session for <yellow>{player}</yellow>.</green>"
+  recover_saved: "<green>Restored saved staff session for <yellow>{player}</yellow>.</green>"
+  recover_none: "<yellow>No active saved staff session was found for <white>{player}</white>.</yellow>"
+  recover_failed: "<red>Could not recover staff session for <yellow>{player}</yellow>.</red>"
+
+vanish:
+  console_usage: "<yellow>Usage:</yellow> <white>/vanish <player></white>"
+  self_enabled: "<aqua>Vanish enabled.</aqua> <gray>Regular players can no longer see you.</gray>"
+  self_disabled: "<green>Vanish disabled.</green> <gray>You are visible again.</gray>"
+  target_enabled_sender: "<aqua>{player}</aqua> <gray>is now vanished.</gray>"
+  target_disabled_sender: "<green>{player}</green> <gray>is visible again.</gray>"
+  target_enabled_target: "<aqua>You were vanished by <white>{staff}</white>.</aqua>"
+  target_disabled_target: "<green>You are visible again.</green>"
+  no_others_permission: "<red>You cannot toggle vanish for other players.</red>"
+
+freeze:
+  frozen: "<red>You have been frozen.</red> <gray>Do not disconnect.</gray>"
+  unfrozen: "<green>You have been unfrozen.</green>"
+  froze_sender: "<red>Frozen:</red> <yellow>{player}</yellow>"
+  unfroze_sender: "<green>Unfrozen:</green> <yellow>{player}</yellow>"
+  not_frozen: "<yellow>{player}</yellow> <gray>is not frozen.</gray>"
+  no_self: "<red>You cannot freeze yourself.</red>"
+  no_staff_permission: "<red>You cannot freeze another staff member.</red>"
+  blocked_command: "<red>You cannot use that command while frozen.</red>"
+  blocked_chat: "<red>You cannot chat while frozen.</red>"
+  tool_hint: "<yellow>Right-click a player to freeze or unfreeze them.</yellow>"
+  title: "<red><bold>FROZEN</bold></red>"
+  subtitle: "<gray>Wait for staff. Do not disconnect.</gray>"
+
+tools:
+  no_permission: "<red>You cannot use this staff tool.</red>"
+  cannot_drop: "<red>Staff tools cannot be dropped.</red>"
+  vanish_enabled: "<aqua>Vanish enabled.</aqua>"
+  vanish_disabled: "<green>Vanish disabled.</green>"
+  push_hint: "<gray>Right-click a player to push them away.</gray>"
+  pushed: "<green>Pushed <yellow>{player}</yellow>.</green>"
+  inspect_hint: "<gray>Right-click a player to open a read-only inventory view.</gray>"
+  inspect_opened: "<green>Inspecting <yellow>{player}</yellow>.</green>"
+  inspect_staff_denied: "<red>You cannot inspect another staff member.</red>"
+  freeze_staff_denied: "<red>You cannot freeze another staff member.</red>"
+  freeze_staff_froze: "<red>Frozen:</red> <yellow>{player}</yellow>"
+  freeze_staff_unfroze: "<green>Unfrozen:</green> <yellow>{player}</yellow>"
+  freeze_target_frozen: "<red>You have been frozen by staff.</red> <gray>Do not disconnect.</gray>"
+  freeze_target_unfrozen: "<green>You have been unfrozen by staff.</green>"
+  fly_enabled: "<green>Flight enabled.</green>"
+  fly_disabled: "<yellow>Flight disabled.</yellow>"
+  exit_success: "<green>Exited Staff Mode.</green>"
+  exit_not_in_lightstaff: "<red>You are not in Staff Mode.</red>"
+
+stafftp:
+  usage: "<yellow>Usage:</yellow> <white>/stafftp <player></white>"
+  not_online: "<red>That player is not online.</red>"
+  self: "<red>You cannot teleport to yourself.</red>"
+  failed: "<red>Teleport failed. Try again.</red>"
+  success: "<green>Teleported to <yellow>{player}</yellow>.</green>"
+
+whitelist:
+  toggled: "<gray>Staff whitelist bypass is now {state}<gray>.</gray>"
+  enabled_state: "<green>enabled</green>"
+  disabled_state: "<red>disabled</red>"
+
+alerts:
+  staff_join: "<dark_gray>Staff</dark_gray> <green>{player}</green> <gray>joined.</gray>"
+  staff_quit: "<dark_gray>Staff</dark_gray> <yellow>{player}</yellow> <gray>left.</gray>"
+
+actionbar:
+  vanish: "Vanish "
+  fly: "Fly "
+  frozen: "Frozen "
+  staff_mode: "Staff Mode"
