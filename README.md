@@ -245,3 +245,7 @@ The jar is created at:
 ```text
 target/LightStaff-1.0.0.jar
 ```
+
+## License
+
+LightStaff is licensed under the MIT License. See `LICENSE` for details.
