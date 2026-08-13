@@ -2,7 +2,7 @@
 
 A modern staff utility plugin for Paper and Folia servers. LightStaff gives moderators a clean staff mode toolset for investigations: hotbar tools, vanish, freeze, inspection, teleporting, recovery, audit logging, and flexible storage.
 
-Built against Paper `1.19.4` with Java 17, while keeping the runtime path ready for newer Paper builds.
+Built against Paper `1.21.11` with Java 21, with an explicit latest profile for Paper 26.2.
 
 ## Showcase
 
@@ -108,8 +108,8 @@ LightStaff can block players from entering Staff Mode while combat tagged. The c
 
 ## Requirements
 
-- Java 17 or newer
-- Paper `1.19.4+`
+- Java 21 or newer (Java 25 for Minecraft 26.2)
+- Paper/Folia `1.21` through `26.2`
 - Optional: PlaceholderAPI
 - Optional: CombatLogX, PvPManager, DeluxeCombat, CombatPlus, or another combat plugin exposed through metadata or PlaceholderAPI
 

@@ -133,7 +133,7 @@ public final class LightStaff extends JavaPlugin {
     }
 
     private void logCompatibilityProfile() {
-        Console.info("Compatibility profile: api-version=1.19, java=" + System.getProperty("java.version")
+        Console.info("Compatibility profile: api-version=1.21, java=" + System.getProperty("java.version")
                 + ", server=" + getServer().getVersion()
                 + ", bukkit=" + getServer().getBukkitVersion());
     }
