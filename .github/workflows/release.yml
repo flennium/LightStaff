@@ -38,7 +38,7 @@ jobs:
         id: artifact
         run: |
           mkdir -p dist
-          JAR="$(find target -maxdepth 1 -type f -name '*-${{ steps.version.outputs.version }}-shaded.jar' | head -n 1)"
+          JAR="$(find target -maxdepth 1 -type f -name '*-${{ steps.version.outputs.version }}.jar' ! -name 'original-*' | head -n 1)"
           if [ -z "$JAR" ]; then
             echo "No release jar found in target" >&2
             ls -la target >&2
